@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>리야마켓</title>
+</head>
+<body>
+
+<div id="wrap">
+    <header>
+        <img src="img/symbol.png" alt="symbol">
+    </header>
+
+    <div id="content">
+        <div id="visual">
+            <div class="cont">
+                <div class="left" data-aos="fade-right">
+                    <h3>쉽고 편한 비대면 중고거래</h3>
+                    <img class="logo" src="img/logo.png" alt="logo">
+                    <div class="pc">
+                        <div class="btn-wrap">
+                            <a href=""><img src="img/appStore02.png" alt="appStore">App Store</a>
+                            <a href=""><img src="img/googlePlay02.png" alt="googlePlay">Google Play</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right" data-aos="fade-left">
+                    <img class="pc" src="img/visual-screen.png" alt="visualBg">
+                    <img class="mb" src="img/mb-visual-screen.png" alt="visual">
+                </div>
+            </div>
+        </div>
+
+        <div id="cont01" class="fixBtnView">
+            <div class="cont" data-aos="fade-right">
+                <div class="pc">
+                    <img class="screen" src="img/cont01-screen.png" alt="cont01">
+                </div>
+                <div>
+                    <h2>
+                        거래 방식은 비대면으로<br>
+                        <span>거래 과정은 직거래처럼<br>간편하게</span>
+                    </h2>
+                    <img class="screen mb" src="img/mb-cont01-screen.png" alt="cont01">
+                </div>
+            </div>
+        </div>
+
+        <div id="cont02">
+            <div class="cont" data-aos="fade-left">
+                <div>
+                    <h2>
+                        가격 책정 어려운<br>
+                        중고상품 등록<br>
+                        <span>검색으로 쉽게 등록</span>
+                    </h2>
+                    <img class="screen mb" src="img/mb-cont02-screen.png" alt="cont02">
+                </div>
+                <div class="pc">
+                    <img class="screen" src="img/cont02-screen.png" alt="cont02">
+                </div>
+            </div>
+        </div>
+
+        <div id="cont03">
+            <div class="cont" data-aos="fade-right">
+                <div class="pc">
+                    <img class="screen" src="img/cont03-screen.png" alt="cont03">
+                </div>
+                <div>
+                    <h2>
+                        내가 원하는 제품도<br>
+                        내가 판매하려는 제품도<br>
+                        <span>검색 최적화 중고 거래 플랫폼</span>
+                    </h2>
+                    <img class="pc character" src="img/cont03-character.png" alt="cont03">
+                    <img class="screen mb" src="img/mb-cont03-screen.png" alt="cont03">
+                </div>
+            </div>
+        </div>
+
+        <div id="cont04">
+            <div class="cont" data-aos="fade-left">
+                <div>
+                    <h2>
+                        물건을 살 때도<br>
+                        물건을 판매할 때도<br>
+                        <span>점점 쌓이는 포인트</span>
+                    </h2>
+                    <img class="character pc" src="img/cont04-character.png" alt="cont04-character">
+                    <img class="screen mb" src="img/mb-cont04-screen.png" alt="cont04">
+                </div>
+                <div class="pc">
+                    <img class="screen" src="img/cont04-screen.png" alt="cont04">
+                </div>
+            </div>
+        </div>
+
+        <div id="banner">
+            <div class="cont" data-aos="fade-down">
+                <h2>지금 바로 스토어에서<br class="mb">다운로드 하세요</h2>
+                <div class="pc">
+                    <div class="btn-wrap v2">
+                        <a href=""><img src="img/appStore01.png" alt="appStore">App Store</a>
+                        <a href=""><img src="img/googlePlay01.png" alt="googlePlay">Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>©2022 TheBreeze</footer>
+
+    <div class="mb">
+        <div class="fix-button">
+            <div class="cont">
+                <div class="btn-wrap v2">
+                    <a href=""><img src="img/appStore01.png" alt="appStore">App Store</a>
+                    <a href=""><img src="img/googlePlay01.png" alt="googlePlay">Google Play</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="js/vendor.min.js"></script>
+<script>
+    AOS.init();
+
+    // fixBtn 노출
+    function viewFixBtn(){
+        var scroll_top = $(this).scrollTop();
+        var fixBtnViewOffset = $(".fixBtnView").offset().top;
+
+        if (scroll_top > fixBtnViewOffset) {
+            $('.fix-button').addClass('on');
+        } else {
+            $('.fix-button').removeClass('on');
+        }
+    }
+    viewFixBtn();
+    $(window).on("scroll", function(){
+        viewFixBtn();
+    });
+</script>
+</body>
+</html>
